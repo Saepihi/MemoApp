@@ -3,10 +3,10 @@ import { View, Text, StyleSheet } from "react-native";
 const Index = () => {
   return (
     <View style={styles.container}>
-      <View>
-        <View>
-          <Text>MemoApp</Text>
-          <Text>ログアウト</Text>
+      <View style={styles.header}>
+        <View style={styles.headerInner}>
+          <Text style={styles.headerText}>MemoApp</Text>
+          <Text style={styles.logoutText}>ログアウト</Text>
         </View>
       </View>
 
@@ -55,8 +55,31 @@ const Index = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
+    backgroundColor: "#fff",
+  },
+  header: {
+    height: 104,
+    backgroundColor: "#467FD3",
+    justifyContent: "flex-end"
+  },
+  headerInner: {
+    alignItems: "center",
+  },
+  headerText: {
+    color: "#fff",
+    fontSize: 22,
+    fontWeight: "bold",
+    marginBottom: 8,
+    lineHeight: 32,
+
+  },
+  logoutText: {
+    color: "#fff",
+    opacity: 0.7,
+    fontSize: 16,
+    position: "absolute",
+    right:16,
+    bottom: 16,
   }
 });
 
